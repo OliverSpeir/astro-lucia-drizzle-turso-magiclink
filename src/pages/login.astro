@@ -1,0 +1,29 @@
+---
+const user = Astro.locals.user;
+if (user) {
+  return Astro.redirect("/");
+}
+---
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+  </head>
+  <body>
+    <h1>Login Page</h1>
+
+    <form action="/api/signin" method="POST">
+      <input type="email" name="email" required placeholder="email address" />
+      <button>Sign In</button>
+    </form>
+
+    <form action="/api/signup" method="POST">
+      <input type="email" name="email" required placeholder="email address" />
+      <button>Sign Up</button>
+    </form>
+  </body>
+</html>

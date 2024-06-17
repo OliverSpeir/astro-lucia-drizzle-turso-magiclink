@@ -1,0 +1,12 @@
+{
+  "extends": "astro/tsconfigs/strictest",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@db": ["src/lib/db/index"],
+      "@schema": ["src/lib/db/schema"],
+      "@auth": ["src/lib/auth"],
+      "@utils": ["src/lib/utils"]
+    }
+  }
+}
